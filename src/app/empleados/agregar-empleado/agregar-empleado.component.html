@@ -1,0 +1,41 @@
+<div class="container-custom">
+    <div class="form-container">
+        <h3>Registro</h3>
+        <hr />
+        <form (submit)="agregar()">   
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Numero de Empleado" name="numEmpleado" [(ngModel)]="nuevo.numEmpleado"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Nombre" name="nombre" [(ngModel)]="nuevo.nombre"/>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Correo" name="correo" [(ngModel)]="nuevo.correo"/>
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" placeholder="Telefono" name="telefono" [(ngModel)]="nuevo.telefono"/>
+            </div>
+            <div class="form-group">
+                <input type="date" class="form-control" placeholder="Fecha Nacimiento" name="fechaNacimiento" [(ngModel)]="nuevo.fechaNacimiento"/>
+            </div>
+            <div class="form-group">
+                <div class="row">
+                    <div class="col-10">
+                        <p>Sexo:</p>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="1" name="sexo" [(ngModel)]="nuevo.sexo" [value]="true">
+                            <label class="form-check-label" for="1">Masculino</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" id="2" name="sexo" [(ngModel)]="nuevo.sexo" [value]="false">
+                            <label class="form-check-label" for="2">Femenino</label>
+                        </div>
+                    </div>
+                    <div class="col-2">
+                        <button type="submit" class="btn btn-outline-secondary">Agregar</button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
